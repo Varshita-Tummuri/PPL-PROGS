@@ -1,23 +1,22 @@
 //print reverse of a number(functions)
 #include <stdio.h>
-int swapping(int x,int y,int temp)
+void swapping()
 {
+    int x,y,a,temp;
+    temp=0;
 	printf("Enter a number:");
 	scanf("%d",&x);
-	printf("here i am");
-	if(x>1)
-	{
-		printf("i am inside the loop!");
-		y=x%10;
-		printf("%d",y);
-		temp=x-y;
-		x=temp/10;
-		printf("%d",x);
-	}
-	return 0;	
+	a=x;
+	while (x != 0) 
+	{	
+        	y = x % 10;
+        	temp = temp * 10 + y;
+        	x = x / 10;
+   	}
+    	printf("The reverse of %d is: %d\n",a, temp);
 }
 int main()
 {
-	int swapping();
+	swapping();
 	return 0;
 }
