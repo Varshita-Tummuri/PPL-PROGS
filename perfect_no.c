@@ -1,22 +1,24 @@
-/*2D arrays*/
-#include<stdio.h>
-int main()
+//to find if a number is a perfect number or not
+#include <stdio.h>
+int  main()
 {
-	int r,c,i,j;
-	int a[10][10];
-	printf("Enter row size:");
-	scanf("%d",&r);
-	printf("\nEnter column size:");
-	scanf("%d",&c);
-	printf("\nEnter the elemnts:");
-	for(i=0;i<r;i++)
+	int n,i,sum=0;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	for(i=1;i<n;i++)
 	{
-		for(j=0;j<c;j++)
+		if(n%i==0)
 		{
-			scanf("%d",&a[i][j]);
+			sum=sum+i;
 		}
 	}
-	printf("\n%d",a[i][j]);
+	if(sum==n)
+	{
+		printf("Congrats!! This number is a perfect number!");
+	}
+	else if(sum!=n)
+	{
+		printf("Nope. this number is not perfect number.");	
+	}
 	return 0;
-	
 }
