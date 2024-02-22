@@ -5,9 +5,9 @@ int main()
 	int a[10][10];
 	printf("Enter the row size:");
 	scanf("%d",&r);
-	printf("\nEnter the column size:");
+	printf("Enter the column size:");
 	scanf("%d",&c);
-	printf("\nEnter the elements of the matrix:");
+	printf("Enter the elements of the matrix:");
 	for(i=0;i<r;i++)
 	{
 		for(j=0;j<c;j++)
@@ -16,7 +16,14 @@ int main()
 		}
 		
 	}
-	
-	printf("The elements of the matrix are: %d",a[i][j]);
+	printf("The elments of the matrix are: \n");
+	for(i=0;i<r;i++)
+	{
+		for(j=0;j<c;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
 	return 0;
 }
